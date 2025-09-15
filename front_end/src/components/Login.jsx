@@ -21,7 +21,7 @@ const Login = () => {
     console.log("Sending form data:", form);
 
     try {
-      const response = await axios.post('api/user/login', form);
+      const response = await axios.post('/api/user/login', form);
 
       // Show message
       alert(response.data.message);

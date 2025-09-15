@@ -10,7 +10,7 @@ const LearnOne = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/blog/${id}`)
+    axios.get(`/api/blog/${id}`)
       .then((res) => {
         setPost(res.data);
         setLoading(false);

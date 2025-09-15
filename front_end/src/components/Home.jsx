@@ -18,7 +18,7 @@ const Home = () => {
 
 
   useEffect(() => {
-   axios.get("http://localhost:4000/blog/")  //  correct backend URL
+   axios.get("/api/blog/")  //  correct backend URL
 
       .then((res) => {
         setPosts(res.data);
@@ -29,7 +29,7 @@ const Home = () => {
   }, []);
   const deleteblog = (id) => {
   axiosInstance
-    .delete(`http://localhost:4000/blog/${id}`)
+    .delete(`/blog/${id}`)
     .then((res) => {
       setPosts((prevPosts) => prevPosts.filter((p) => p._id !== id)); // update UI without reload
     })
